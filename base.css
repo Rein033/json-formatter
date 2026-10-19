@@ -19,7 +19,7 @@ h2 { font-size: 1rem; margin: 0; }
 .top { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 20px; border-bottom: 1px solid var(--line); background: var(--panel); position: sticky; top: 0; z-index: 5; }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; min-width: 0; }
 .logo { width: 34px; height: 34px; border-radius: 10px; background: var(--accent); color: var(--accent-fg); display: flex; align-items: center; justify-content: center; font-size: 21px; flex: none; }
-.brand b { display: block; }
+.brand b, .brand h1 { display: block; font-size: 1rem; margin: 0; line-height: 1.3; }
 .brand small { color: var(--muted); display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 nav { display: flex; gap: 8px; align-items: center; }
 nav a { display: inline-flex; align-items: center; gap: 6px; text-decoration: none; padding: 7px 12px; border-radius: 10px; font-weight: 600; font-size: .9rem; white-space: nowrap; }
@@ -85,3 +85,14 @@ button:disabled { opacity: .4; cursor: default; }
 
 footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 10px 16px 30px; }
 .toast { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); background: var(--fg); color: var(--bg); padding: 9px 16px; border-radius: 12px; font-weight: 600; font-size: .9rem; z-index: 20; box-shadow: 0 6px 24px rgba(0,0,0,.25); }
+
+/* Over deze tool, FAQ en verwante tools (onderaan elke pagina) */
+.over { margin-top: 26px; }
+.over h2 { font-size: 1.15rem; margin: 0 0 8px; }
+.over p { color: var(--muted); margin: 0 0 8px; }
+.kenm { margin: 0; padding-left: 1.2em; color: var(--muted); } .kenm li { margin: 4px 0; }
+.faq details { border-top: 1px solid var(--line); padding: 10px 0; } .faq details:first-child { border-top: 0; }
+.faq summary { cursor: pointer; font-weight: 600; } .faq p { margin: 8px 0 0; }
+.rels { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 8px; }
+.rel { display: flex; gap: 10px; align-items: center; padding: 10px; border-radius: 12px; background: var(--field); text-decoration: none; color: inherit; border: 1px solid transparent; }
+.rel:hover { border-color: var(--accent); } .rel b { display: block; font-size: .92rem; } .rel small { color: var(--muted); font-size: .8rem; }

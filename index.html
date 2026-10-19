@@ -3,21 +3,38 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>JSON Formatter</title>
+<title>JSON Formatter en Validator – gratis JSON netjes maken en controleren</title>
 <meta name="description" content="Maak JSON netjes, verklein het of controleer het op fouten, met de precieze plek van de fout. Alles in je browser.">
-<meta property="og:title" content="JSON Formatter">
+<link rel="canonical" href="https://uselesssite.nl/json-formatter/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="uselesssite.nl">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:url" content="https://uselesssite.nl/json-formatter/">
+<meta property="og:title" content="JSON Formatter en Validator – gratis JSON netjes maken en controleren">
 <meta property="og:description" content="Maak JSON netjes, verklein het of controleer het op fouten, met de precieze plek van de fout. Alles in je browser.">
+<meta property="og:image" content="https://uselesssite.nl/json-formatter/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="JSON Formatter en Validator – gratis JSON netjes maken en controleren">
+<meta name="twitter:description" content="Maak JSON netjes, verklein het of controleer het op fouten, met de precieze plek van de fout. Alles in je browser.">
+<meta name="twitter:image" content="https://uselesssite.nl/json-formatter/og.png">
+<meta name="theme-color" content="#039be5">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "JSON Formatter", "url": "https://uselesssite.nl/json-formatter/", "description": "Maak JSON netjes, verklein het of controleer het op fouten, met de precieze plek van de fout. Alles in je browser.", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any (web browser)", "browserRequirements": "Requires JavaScript", "inLanguage": "nl", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "featureList": ["Netjes maken met 2 of 4 spaties of tabs, of juist verkleinen tot één regel", "Fouten met regel, kolom en een pijltje naar de plek", "Sleutels alfabetisch sorteren", "Kleuren voor sleutels, tekst, getallen en true/false/null", "Statistieken: type, aantal sleutels, diepte en grootte", "Bestand openen, slepen, kopiëren en downloaden"], "image": "https://uselesssite.nl/json-formatter/og.png", "author": {"@type": "Person", "name": "Rein033", "url": "https://github.com/Rein033"}, "license": "https://opensource.org/licenses/MIT", "codeRepository": "https://github.com/Rein033/json-formatter"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "uselesssite.nl", "item": "https://uselesssite.nl/"}, {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://uselesssite.nl/tools/"}, {"@type": "ListItem", "position": 3, "name": "JSON Formatter", "item": "https://uselesssite.nl/json-formatter/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is mijn JSON veilig?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. De JSON Formatter draait helemaal in je browser. Wat je plakt wordt niet verstuurd of opgeslagen op een server; alleen je laatste invoer wordt in je eigen browser bewaard zodat je verder kunt waar je was."}}, {"@type": "Question", "name": "Waarom zegt hij dat mijn JSON ongeldig is?", "acceptedAnswer": {"@type": "Answer", "text": "Veelvoorkomende fouten zijn een komma na het laatste item, enkele aanhalingstekens ('tekst') in plaats van dubbele (\"tekst\"), sleutels zonder aanhalingstekens en commentaar. De tool toont de regel en kolom van de fout met een pijltje erbij."}}, {"@type": "Question", "name": "Wat is het verschil tussen netjes maken en verkleinen?", "acceptedAnswer": {"@type": "Answer", "text": "Netjes maken (formatteren) zet elke waarde op een eigen regel met inspringing, zodat je het makkelijk leest. Verkleinen (minify) haalt alle spaties en enters weg, zodat het bestand zo klein mogelijk is."}}, {"@type": "Question", "name": "Kan ik grote bestanden openen?", "acceptedAnswer": {"@type": "Answer", "text": "Ja, je kunt een bestand openen of in het invoerveld slepen. Bestanden van enkele megabytes gaan prima; hoe groot precies hangt af van je computer."}}]}</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='3' y='3' width='26' height='26' rx='7' fill='%2303a9f4'/%3E%3Crect x='9' y='10' width='14' height='3' rx='1.5' fill='%23fff'/%3E%3Crect x='9' y='15' width='10' height='3' rx='1.5' fill='%23fff' opacity='.7'/%3E%3Crect x='9' y='20' width='12' height='3' rx='1.5' fill='%23fff' opacity='.5'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
-<link rel="stylesheet" href="base.css?v=1">
-<link rel="stylesheet" href="style.css?v=1">
+<link rel="stylesheet" href="base.css?v=2">
+<link rel="stylesheet" href="style.css?v=2">
 
 <script defer src="https://analytics.uselesssite.nl/script.js" data-website-id="c8741679-5df2-4679-9527-39cc9edc25c0"></script>
 </head>
 <body>
 <header class="top">
   <a class="brand" href="./"><span class="logo"><i class="mdi mdi-code-json"></i></span>
-    <div><b>JSON Formatter</b><small>Netjes maken, verkleinen en controleren</small></div></a>
+    <div><h1>JSON Formatter</h1><small>Netjes maken, verkleinen en controleren</small></div></a>
   <nav>
     <button type="button" class="ib" id="theme" title="Licht / donker"><i class="mdi mdi-theme-light-dark"></i></button>
     <a href="https://uselesssite.nl/tools/" class="ghost"><i class="mdi mdi-view-grid-outline"></i> <span>Alle tools</span></a>
@@ -59,13 +76,25 @@
   </div>
 </div>
 <input type="file" id="file" accept=".json,application/json,text/plain" hidden>
+
+<section class="over">
+  <div class="panel">
+    <h2>Wat kan JSON Formatter?</h2>
+    <p>Maak JSON netjes, verklein het of controleer het op fouten, met de precieze plek van de fout. Alles in je browser.</p>
+    <ul class="kenm"><li>Netjes maken met 2 of 4 spaties of tabs, of juist verkleinen tot één regel</li><li>Fouten met regel, kolom en een pijltje naar de plek</li><li>Sleutels alfabetisch sorteren</li><li>Kleuren voor sleutels, tekst, getallen en true/false/null</li><li>Statistieken: type, aantal sleutels, diepte en grootte</li><li>Bestand openen, slepen, kopiëren en downloaden</li></ul>
+  </div>
+  <div class="panel"><h2>Veelgestelde vragen</h2><div class="faq"><details><summary>Is mijn JSON veilig?</summary><p>Ja. De JSON Formatter draait helemaal in je browser. Wat je plakt wordt niet verstuurd of opgeslagen op een server; alleen je laatste invoer wordt in je eigen browser bewaard zodat je verder kunt waar je was.</p></details><details><summary>Waarom zegt hij dat mijn JSON ongeldig is?</summary><p>Veelvoorkomende fouten zijn een komma na het laatste item, enkele aanhalingstekens ('tekst') in plaats van dubbele ("tekst"), sleutels zonder aanhalingstekens en commentaar. De tool toont de regel en kolom van de fout met een pijltje erbij.</p></details><details><summary>Wat is het verschil tussen netjes maken en verkleinen?</summary><p>Netjes maken (formatteren) zet elke waarde op een eigen regel met inspringing, zodat je het makkelijk leest. Verkleinen (minify) haalt alle spaties en enters weg, zodat het bestand zo klein mogelijk is.</p></details><details><summary>Kan ik grote bestanden openen?</summary><p>Ja, je kunt een bestand openen of in het invoerveld slepen. Bestanden van enkele megabytes gaan prima; hoe groot precies hangt af van je computer.</p></details></div></div>
+  <div class="panel"><h2>Meer gratis tools</h2><div class="rels"><a class="rel" href="https://uselesssite.nl/cv-generator/"><span class="tile-ic"><i class="mdi mdi-file-account-outline"></i></span><span><b>CV Generator</b><small>Modern cv maken en als PDF opslaan</small></span></a><a class="rel" href="https://uselesssite.nl/email-handtekening/"><span class="tile-ic"><i class="mdi mdi-email-edit-outline"></i></span><span><b>E-mailhandtekening</b><small>Nette handtekening voor Outlook en Gmail</small></span></a><a class="rel" href="https://uselesssite.nl/nato-alfabet/"><span class="tile-ic"><i class="mdi mdi-alphabetical-variant"></i></span><span><b>NATO-alfabet</b><small>Spellen als een piloot</small></span></a><a class="rel" href="https://uselesssite.nl/sap-import-generator/"><span class="tile-ic"><i class="mdi mdi-table-arrow-right"></i></span><span><b>SAP Import Generator</b><small>CSV-importbestanden voor SAP</small></span></a><a class="rel" href="https://uselesssite.nl/sprint-planner/"><span class="tile-ic"><i class="mdi mdi-run-fast"></i></span><span><b>Sprint Planner</b><small>Capaciteit en backlog voor je sprint</small></span></a><a class="rel" href="https://uselesssite.nl/wachtwoord-generator/"><span class="tile-ic"><i class="mdi mdi-form-textbox-password"></i></span><span><b>Wachtwoord Generator</b><small>Sterke wachtwoorden en wachtzinnen</small></span></a></div>
+    <p class="hint"><a href="https://uselesssite.nl/tools/">Alle tools bekijken →</a></p></div>
+</section>
+
 </main>
 
 <footer>
   Gratis en open source · Gemaakt door <a href="https://github.com/Rein033">Rein033</a> · Alles gebeurt in je browser, er gaat niets naar een server ·
   <a href="https://uselesssite.nl/tools/">Meer tools</a>
 </footer>
-<script src="base.js?v=1"></script>
-<script src="app.js?v=1"></script>
+<script src="base.js?v=2"></script>
+<script src="app.js?v=2"></script>
 </body>
 </html>
