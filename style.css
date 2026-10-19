@@ -1,0 +1,11 @@
+.out { margin: 0; min-height: 420px; max-height: 70vh; overflow: auto; background: var(--field); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; font: .85rem/1.5 var(--mono); white-space: pre-wrap; word-break: break-word; }
+.out:empty::before { content: 'Uitvoer verschijnt hier'; color: var(--muted); }
+#in { min-height: 420px; }
+.k { color: #8e24aa; } .s { color: #2e7d32; } .n { color: #1565c0; } .b { color: #ef6c00; font-weight: 600; } .z { color: var(--muted); font-style: italic; }
+:root[data-theme="dark"] .k { color: #ce93d8; } :root[data-theme="dark"] .s { color: #a5d6a7; } :root[data-theme="dark"] .n { color: #90caf9; } :root[data-theme="dark"] .b { color: #ffcc80; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .k { color: #ce93d8; } :root:not([data-theme="light"]) .s { color: #a5d6a7; } :root:not([data-theme="light"]) .n { color: #90caf9; } :root:not([data-theme="light"]) .b { color: #ffcc80; } }
+.err { background: color-mix(in srgb, var(--bad) 12%, transparent); border: 1px solid color-mix(in srgb, var(--bad) 45%, transparent); color: var(--fg); border-radius: 10px; padding: 10px 12px; margin-bottom: 10px; }
+.err b { color: var(--bad); }
+.err pre { margin: 8px 0 0; font: .82rem/1.45 var(--mono); white-space: pre; overflow-x: auto; }
+.stats { margin-top: 10px; }
+.drop { outline: 2px dashed var(--accent); outline-offset: 4px; }

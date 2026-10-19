@@ -1,0 +1,87 @@
+/* Gedeelde stijl van de uselesssite.nl-tools (zelfde look als HA Card Generator en CV Generator) */
+:root {
+  --bg: #f4f5f7; --fg: #1c1d21; --muted: #646872; --panel: #fff; --line: rgba(0,0,0,.09); --accent: #039be5; --accent-fg: #fff;
+  --field: #f6f7f9; --ok: #2e7d32; --warn: #ef6c00; --bad: #e53935; --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #111215; --fg: #e9e9ee; --muted: #a0a3ab; --panel: #1a1b20; --line: rgba(255,255,255,.08);
+    --accent: #29b6f6; --accent-fg: #06121a; --field: #23242a; --ok: #66bb6a; --warn: #ffa726; --bad: #ef5350; }
+}
+:root[data-theme="dark"] { --bg: #111215; --fg: #e9e9ee; --muted: #a0a3ab; --panel: #1a1b20; --line: rgba(255,255,255,.08);
+  --accent: #29b6f6; --accent-fg: #06121a; --field: #23242a; --ok: #66bb6a; --warn: #ffa726; --bad: #ef5350; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+a { color: var(--accent); }
+button, input, select, textarea { font: inherit; color: inherit; }
+h2 { font-size: 1rem; margin: 0; }
+[hidden] { display: none !important; }
+
+.top { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 20px; border-bottom: 1px solid var(--line); background: var(--panel); position: sticky; top: 0; z-index: 5; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; min-width: 0; }
+.logo { width: 34px; height: 34px; border-radius: 10px; background: var(--accent); color: var(--accent-fg); display: flex; align-items: center; justify-content: center; font-size: 21px; flex: none; }
+.brand b { display: block; }
+.brand small { color: var(--muted); display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+nav { display: flex; gap: 8px; align-items: center; }
+nav a { display: inline-flex; align-items: center; gap: 6px; text-decoration: none; padding: 7px 12px; border-radius: 10px; font-weight: 600; font-size: .9rem; white-space: nowrap; }
+.ghost { color: var(--fg); border: 1px solid var(--line); }
+.coffee { background: #ffdd00; color: #1c1d21; }
+@media (max-width: 640px) { .brand small, nav a span { display: none; } .top { padding: 12px 14px; } }
+
+main { max-width: 1180px; margin: 0 auto; padding: 18px 16px; }
+.cols { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 18px; align-items: start; }
+@media (max-width: 900px) { .cols { grid-template-columns: minmax(0, 1fr); } }
+.cols > * { min-width: 0; }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 14px 16px; margin-bottom: 14px; }
+.hint { color: var(--muted); font-size: .82rem; margin: 8px 0 0; }
+
+/* Tegelkop zoals een Home Assistant-tile */
+.tile-head { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.tile-ic { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; flex: none;
+  color: var(--accent); background: color-mix(in srgb, var(--accent) 18%, transparent); }
+.tile-txt { display: flex; flex-direction: column; min-width: 0; flex: 1; }
+.tile-txt b { font-size: .95rem; font-weight: 600; }
+.tile-txt small { color: var(--muted); font-size: .8rem; }
+
+.form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 12px; }
+@media (max-width: 520px) { .form { grid-template-columns: 1fr; } }
+.fld { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.fld.wide { grid-column: 1 / -1; }
+.fld > label, .lbl { font-size: .8rem; font-weight: 600; color: var(--muted); }
+input:not([type=checkbox]):not([type=color]):not([type=range]):not([type=radio]), select, textarea { width: 100%; min-width: 0; padding: 8px 10px; border: 1px solid var(--line); border-radius: 10px; background: var(--field); outline: none; }
+input:focus, select:focus, textarea:focus { border-color: var(--accent); }
+textarea { resize: vertical; line-height: 1.45; }
+textarea.code, .code { font-family: var(--mono); font-size: .85rem; }
+input[type=range] { width: 100%; accent-color: var(--accent); }
+
+button.main { border: none; background: var(--accent); color: var(--accent-fg); border-radius: 10px; padding: 8px 16px; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 6px; }
+button.small { border: 1px solid var(--line); background: var(--field); border-radius: 10px; padding: 6px 11px; cursor: pointer; display: inline-flex; align-items: center; gap: 5px; font-size: .88rem; }
+button.small:hover { border-color: var(--accent); }
+button.add { border: 1px dashed var(--line); background: none; border-radius: 12px; padding: 8px 12px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; color: var(--accent); font-weight: 600; }
+button.add:hover { border-color: var(--accent); }
+.ib { width: 32px; height: 32px; border: 0; background: none; border-radius: 10px; cursor: pointer; color: var(--muted); display: inline-flex; align-items: center; justify-content: center; font-size: 18px; flex: none; }
+.ib:hover { background: var(--field); color: var(--fg); }
+button:disabled { opacity: .4; cursor: default; }
+.btns { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+.wide-btn { width: 100%; padding: 11px 16px; }
+
+.seg { display: inline-flex; flex-wrap: wrap; gap: 6px; }
+.seg button { border: 1px solid var(--line); background: var(--field); border-radius: 999px; padding: 5px 12px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; font-size: .88rem; }
+.seg button.on { border-color: var(--accent); color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, transparent); font-weight: 600; }
+.tog { display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: .92rem; padding: 4px 0; }
+.tog input { display: none; }
+.tog span { width: 34px; height: 20px; border-radius: 999px; background: var(--line); position: relative; flex: none; transition: background .2s; }
+.tog span::after { content: ''; position: absolute; left: 3px; top: 3px; width: 14px; height: 14px; border-radius: 50%; background: #fff; transition: transform .2s; box-shadow: 0 1px 3px rgba(0,0,0,.3); }
+.tog input:checked + span { background: var(--accent); }
+.tog input:checked + span::after { transform: translateX(14px); }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 8px; }
+.stat { background: var(--field); border-radius: 12px; padding: 10px 12px; }
+.stat b { display: block; font-size: 1.5rem; line-height: 1.2; }
+.stat small { color: var(--muted); }
+.bar { height: 10px; border-radius: 999px; background: var(--field); overflow: hidden; }
+.bar i { display: block; height: 100%; background: var(--accent); border-radius: 999px; transition: width .2s, background .2s; }
+.row { display: flex; gap: 8px; align-items: center; }
+.row > input:first-child { flex: 1; }
+.ok { color: var(--ok); } .warn { color: var(--warn); } .bad { color: var(--bad); }
+
+footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 10px 16px 30px; }
+.toast { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); background: var(--fg); color: var(--bg); padding: 9px 16px; border-radius: 12px; font-weight: 600; font-size: .9rem; z-index: 20; box-shadow: 0 6px 24px rgba(0,0,0,.25); }
